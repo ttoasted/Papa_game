@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
-<style>
+<title>Schoology</title>
+<link rel="icon" type="image/x-icon" href="https://www.nicepng.com/png/full/433-4330628_schoology-icon-schoology-logo-png.png"><style>
 body {
 background-color: black;
 }
@@ -20,6 +20,11 @@ bottom: 0;
     <script>
         document.getElementById("em").src = p;
         document.getElementById("em").height = screen.height;
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+            //might not work
+        });
     </script>
     <script src="https://unpkg.com/@ruffle-rs/ruffle">//fetches the code for the emulator</script>
 </body>
